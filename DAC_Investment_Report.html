@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danaos (DAC) — Investment Memo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+:root{--bg:#F5F4EF;--bg-card:#FFF;--bg-s:#EDECE7;--bg-sb:#2F2F2C;--t1:#1A1915;--t2:#63635E;--t3:#8F8E88;--ti:#F5F4EF;--b1:#D8D6CE;--b2:#E8E6E0;--b3:#F0EEE8;--acc:#C96442;--red:#B8352A;--rsc:#FBEAE8;--grn:#1A7F37;--gs:#E6F6EC;--amb:#9A6700;--as:#FFF4D4;--blu:#1F6FEB;--bs:#E8F0FE;--r:12px;--rs:8px;--rx:6px;--f:'Inter',-apple-system,sans-serif;--fm:'JetBrains Mono',monospace;--sh:0 1px 2px rgba(0,0,0,.04);--shm:0 2px 8px rgba(0,0,0,.06)}
+*{margin:0;padding:0;box-sizing:border-box}html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--t1);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+.L{display:flex;min-height:100vh}
+.S{width:264px;min-width:264px;background:var(--bg-sb);color:var(--ti);position:sticky;top:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;border-right:1px solid rgba(255,255,255,.06)}
+.S::-webkit-scrollbar{width:4px}.S::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px}
+.sh{padding:22px 20px 16px}.st{font-family:var(--fm);font-size:10.5px;color:var(--acc);letter-spacing:.12em;margin-bottom:7px;font-weight:600}.sn{font-size:16px;font-weight:600;line-height:1.35;letter-spacing:-.01em}.ss{font-size:12px;color:rgba(255,255,255,.4);margin-top:5px;line-height:1.5}
+.sbadge{display:inline-block;margin-top:11px;background:rgba(255,255,255,.1);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:5px;letter-spacing:.02em}
+.sN{flex:1;padding:8px}.sgl{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:14px 12px 6px;font-weight:500}
+.si{display:flex;align-items:center;gap:9px;padding:7px 12px;border-radius:var(--rx);font-size:13px;color:rgba(255,255,255,.55);cursor:pointer;transition:all .12s;text-decoration:none;margin-bottom:1px}
+.si:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.85)}.si.a{background:rgba(255,255,255,.1);color:#fff;font-weight:500}
+.sd{width:5px;height:5px;border-radius:50%;flex-shrink:0;background:var(--acc)}
+.sf{padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.06)}.sm{font-size:11px;color:rgba(255,255,255,.28);line-height:1.6}
+.M{flex:1;padding:42px 60px 110px;max-width:880px}
+h1{font-size:25px;font-weight:600;line-height:1.3;letter-spacing:-.02em;margin-bottom:8px}
+h2{font-size:19px;font-weight:600;line-height:1.35;letter-spacing:-.015em;margin:46px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--b1)}
+h3{font-size:15px;font-weight:600;margin:26px 0 10px;letter-spacing:-.01em}
+p{margin-bottom:14px;font-size:14px;line-height:1.78}
+.pm{font-size:12px;color:var(--t3);margin-bottom:26px;display:flex;gap:16px;flex-wrap:wrap}
+.lead{font-size:15px;line-height:1.8;color:var(--t1)}
+strong{font-weight:600}.acc{color:var(--acc)}
+.ex{background:var(--bg-card);border:1px solid var(--b2);border-radius:var(--r);padding:20px 24px;margin:18px 0 26px;box-shadow:var(--sh);font-size:14px;line-height:1.8}.el{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:8px}.ex.w{border-left:3px solid var(--amb)}.ex.d{border-left:3px solid var(--red)}.ex.i{border-left:3px solid var(--blu)}.ex.g{border-left:3px solid var(--grn)}
+.c{display:inline-flex;align-items:center;padding:1px 7px;border-radius:var(--rx);font-size:10.5px;font-weight:600;vertical-align:middle;line-height:1.5;margin-left:3px}.ch{background:var(--gs);color:var(--grn)}.cm{background:var(--as);color:var(--amb)}.cl{background:var(--rsc);color:var(--red)}
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:14px 0 22px}.mc{background:var(--bg-card);border:1px solid var(--b2);border-radius:var(--rs);padding:14px 16px;box-shadow:var(--sh)}.ml{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:4px}.mv{font-family:var(--fm);font-size:22px;font-weight:600;letter-spacing:-.02em;margin-bottom:2px}.ms{font-size:11.5px;color:var(--t2);line-height:1.5}.mr{color:var(--red)}.mg2{color:var(--grn)}.ma{color:var(--amb)}
+.tw{overflow-x:auto;margin:12px 0 18px;border:1px solid var(--b2);border-radius:var(--rs);box-shadow:var(--sh)}table.t{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--bg-card)}table.t th{padding:9px 11px;text-align:right;font-weight:500;font-size:11px;color:var(--t3);background:var(--bg-s);border-bottom:1px solid var(--b1);white-space:nowrap}table.t th:first-child{text-align:left}table.t td{padding:7px 11px;text-align:right;border-bottom:1px solid var(--b3);font-variant-numeric:tabular-nums;font-family:var(--fm);font-size:12px}table.t td:first-child{text-align:left;font-family:var(--f);font-weight:500;color:var(--t2);font-size:12.5px}table.t tr:last-child td{border-bottom:none}table.t tr:hover td{background:rgba(0,0,0,.015)}table.t .hi{color:var(--red);font-weight:600}table.t .lo{color:var(--grn);font-weight:600}table.t .am{color:var(--amb);font-weight:600}
+.in{background:var(--bg-card);border:1px solid var(--b2);border-radius:var(--rs);padding:16px 20px;margin:14px 0;font-size:13px;line-height:1.78;box-shadow:var(--sh)}.it{font-weight:600;font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:7px}.it::before{content:'';display:inline-block;width:3px;height:14px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.ct{background:var(--as);border:1px solid #ECD9A0;border-radius:var(--rs);padding:16px 20px;margin:18px 0;font-size:13px;line-height:1.78}.ctt{font-weight:600;color:var(--amb);margin-bottom:8px}
+.mn{background:var(--bs);border:1px solid #B4D0F5;border-radius:var(--rs);padding:16px 20px;margin:18px 0;font-size:13px;line-height:1.78}.mnt{font-weight:600;color:var(--blu);margin-bottom:8px}
+.vd{border:1.5px solid var(--t1);border-radius:var(--r);padding:24px;margin:26px 0;background:var(--bg-card);box-shadow:var(--shm)}.vdt{font-size:16px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+.split{display:flex;height:22px;border-radius:6px;overflow:hidden;margin:14px 0 6px;font-size:11px;font-weight:600;color:#fff}
+.split .a{background:var(--acc);display:flex;align-items:center;justify-content:center}.split .b{background:#7A8B6F;display:flex;align-items:center;justify-content:center}
+.lad{margin:6px 0 4px}
+.lr{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid var(--b3)}.lr:last-child{border-bottom:none}
+.lrl{flex:0 0 150px;font-size:12.5px;font-weight:500;color:var(--t2)}.lrt{flex:0 0 52px;font-family:var(--fm);font-size:14px;font-weight:600;text-align:right}
+.lrbar{flex:1;height:9px;background:var(--bg-s);border-radius:5px;position:relative}.lrf{position:absolute;top:0;left:0;height:100%;border-radius:5px}.pxm{position:absolute;top:-4px;width:2px;height:17px;background:var(--t1)}
+.scen{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.scc{border-radius:var(--rs);padding:14px 15px;border:1px solid var(--b2)}.scc.bull{background:var(--gs);border-color:#B6E0C2}.scc.base{background:var(--bg-card)}.scc.bear{background:#FCF3E8;border-color:#ECD9A0}.scc.worst{background:var(--rsc);border-color:#F0C9C5}
+.scl{font-size:10px;text-transform:uppercase;letter-spacing:.05em;font-weight:600;color:var(--t3);margin-bottom:5px}.scv{font-family:var(--fm);font-size:18px;font-weight:600}.scs{font-size:11px;color:var(--t2);margin-top:4px;line-height:1.45}
+.dv{height:1px;background:var(--b2);margin:44px 0}
+@media(max-width:1024px){.S{width:220px;min-width:220px}.M{padding:30px 36px 80px}}
+@media(max-width:768px){.L{flex-direction:column}.S{width:100%;min-width:auto;height:auto;position:relative}.sN{display:flex;overflow-x:auto;padding:8px;gap:4px}.sgl{display:none}.si{white-space:nowrap;font-size:12px;padding:6px 10px}.M{padding:22px 16px 60px;max-width:100%}}
+@page{margin:13mm 12mm}
+@media print{
+  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .L{display:block}
+  .S{display:none!important}
+  .M{max-width:100%!important;padding:0!important}
+  h1{font-size:21px;page-break-after:avoid;page-break-before:auto}
+  h2,h3{page-break-after:avoid}
+  p{orphans:3;widows:3}
+  .in,.ex,.ct,.mn,.vd,.tw,.mc,.scc,.lens,.lr{page-break-inside:avoid}
+  .mg,.scen{page-break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+  .dv{margin:22px 0}
+}
+</style>
+</head>
+<body>
+<div class="L">
+<nav class="S">
+  <div class="sh">
+    <div class="st">DAC · NYSE</div>
+    <div class="sn">Danaos Corporation</div>
+    <div class="ss">A ship-leasing business trading below the value of its fleet</div>
+    <span class="sbadge">LONG · Fair value ~$176</span>
+  </div>
+  <div class="sN">
+    <div class="sgl">Memo</div>
+    <a class="si" href="#s0"><span class="sd"></span>Executive Summary</a>
+    <a class="si" href="#s1"><span class="sd"></span>1 · The Business</a>
+    <a class="si" href="#s2"><span class="sd"></span>2 · Investment Thesis</a>
+    <a class="si" href="#s3"><span class="sd"></span>3 · Market View</a>
+    <a class="si" href="#s4"><span class="sd"></span>4 · Management &amp; Track Record</a>
+    <a class="si" href="#s5"><span class="sd"></span>5 · Q1 2026 Earnings</a>
+    <a class="si" href="#s6"><span class="sd"></span>6 · What the Fleet Is Worth</a>
+    <a class="si" href="#s7"><span class="sd"></span>7 · The Breakeven Question</a>
+    <a class="si" href="#s8"><span class="sd"></span>8 · Can the Tenants Pay?</a>
+    <a class="si" href="#s9"><span class="sd"></span>9 · Peer Comparison</a>
+    <a class="si" href="#s10"><span class="sd"></span>10 · Valuation</a>
+    <a class="si" href="#s11"><span class="sd"></span>11 · Scenarios</a>
+    <a class="si" href="#s12"><span class="sd"></span>12 · Key Risks</a>
+    <a class="si" href="#s13"><span class="sd"></span>13 · Final Judgment</a>
+  </div>
+  <div class="sf"><div class="sm">Buy-Side Research · June 2026<br>Based on Q1 2026 earnings &amp; 2025 Annual Report</div></div>
+</nav>
+<main class="M">
+
+<h1 id="s0">Executive Summary</h1>
+<div class="pm"><span>Danaos Corporation (DAC) · NYSE</span><span>June 2026</span></div>
+
+<div class="mg">
+  <div class="mc"><div class="ml">Price (6/29/26)</div><div class="mv">$122</div><div class="ms">52-wk $83–135</div></div>
+  <div class="mc"><div class="ml">Market Cap</div><div class="mv">~$2.27B</div><div class="ms">~18.6M shares</div></div>
+  <div class="mc"><div class="ml">Trailing P/E</div><div class="mv mg2">~4.0x</div><div class="ms">P/B 0.63x</div></div>
+  <div class="mc"><div class="ml">Net Debt</div><div class="mv">~$170M</div><div class="ms">0.23x EBITDA</div></div>
+  <div class="mc"><div class="ml">Backlog</div><div class="mv">$4.1B</div><div class="ms">100/88/65% covered</div></div>
+  <div class="mc"><div class="ml">Shareholder Yield</div><div class="mv mg2">~7%</div><div class="ms">~3% div + buyback</div></div>
+  <div class="mc"><div class="ml">Fair Value</div><div class="mv mg2">~$176</div><div class="ms">book basis · ~$192 at market</div></div>
+  <div class="mc"><div class="ml">Fleet</div><div class="mv">86</div><div class="ms">75 boxships + 11 Capesize</div></div>
+</div>
+
+<p class="lead">The business is simple to describe: Danaos is essentially a <strong>landlord whose tenants are the world's largest ocean carriers</strong>. It owns 75 containerships and 11 Capesize bulkers, charters them out on multi-year leases, collects the payments, and returns the cash to shareholders. There is no reinvention story and no technology angle — it owns ships and rents them out.</p>
+<p>The market values it at about <strong>4.0x earnings and 0.63x book</strong>, with very little net debt. In effect you are paying 63 cents for a dollar of modern, financed, fully-chartered ships, and the income for the next two years is already contracted in a $4.1 billion backlog. With $876M of cash against $1,046M of gross debt, net debt is only ~$170M — an unusually clean balance sheet for a single-digit multiple. You are also paid to wait: a ~3% dividend plus an ongoing buyback put the total shareholder yield near <strong>7%</strong>.</p>
+
+<div class="ex g">
+  <div class="el">Bottom line</div>
+  The key choice sits in the asset value. The fleet is carried at about <strong>$3.3B book</strong> on the balance sheet, but would fetch roughly <strong>$3.6B at today's second-hand prices</strong>. Since ship prices may be near a cycle high, we deliberately use the lower $3.3B book figure, which puts NAV at about <strong>$176 per share (+44% vs $122)</strong>; on the richer market value it would be ~$192. The Combined and earnings-power lenses land nearby at ~$173 and ~$160. So we anchor on the conservative <strong>~$176</strong>, treating the second-hand market as upside. The catch is timing: ship prices are likely near a cycle high, so this is a <strong>cyclical to buy at a discount and sell when the cycle turns</strong>, not a forever-hold.
+</div>
+
+<div class="dv"></div>
+
+<h1 id="s1">1 · The Business</h1>
+<p>Danaos runs two main businesses, split roughly <strong>90 / 10</strong> by revenue (FY2025: container $955.4M of $1,042.5M total, ~91.6%), plus a small new bet on energy transport.</p>
+
+<div style="display:flex;height:14px;border-radius:6px;overflow:hidden;margin:14px 0 8px">
+  <div style="flex:0 0 90%;background:var(--acc)"></div>
+  <div style="flex:0 0 10%;background:#7A8B6F"></div>
+</div>
+<div style="display:flex;gap:18px;font-size:12px;font-weight:600;margin-bottom:6px">
+  <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:var(--acc)"></span>Containership ~90%</span>
+  <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#7A8B6F"></span>Drybulk ~10%</span>
+</div>
+
+<div class="mg">
+  <div class="mc"><div class="ml">① Containership (~90%)</div><div class="mv" style="font-size:16px">75 ships</div><div class="ms">~477,000 TEU. Cross-continental container transport, leased to liner companies on multi-year charters.</div></div>
+  <div class="mc"><div class="ml">② Drybulk (~10%)</div><div class="mv" style="font-size:16px">11 Capesize</div><div class="ms">Bulk carriers hauling mainly iron ore and coal.</div></div>
+  <div class="mc"><div class="ml">③ LNG (call option)</div><div class="mv mg2" style="font-size:16px">~$50M</div><div class="ms">Small recent commitment to LNG shipping — optionality, not yet a driver.</div></div>
+</div>
+
+<h3>What moves on each route</h3>
+<div class="tw"><table class="t">
+  <tr><th>Segment</th><th>Cargo</th><th>Trade flow</th></tr>
+  <tr><td>Containership</td><td style="text-align:left;font-family:var(--f)">Manufactured goods</td><td style="text-align:left;font-family:var(--f)">Mainly China / SE Asia → US / Europe</td></tr>
+  <tr><td>Drybulk (Capesize)</td><td style="text-align:left;font-family:var(--f)">Iron ore &amp; coal</td><td style="text-align:left;font-family:var(--f)">Americas / Australia → China / SE Asia</td></tr>
+</table></div>
+<p>The two segments lean on opposite ends of the same trade system: containerships ride <strong>export demand out of Asia</strong>, while the Capesize bulkers ride <strong>raw-material imports into Asia</strong>. Owning both gives a degree of natural balance across the global goods cycle.</p>
+
+<div class="mn"><div class="mnt">The LNG call option</div>The company has recently committed roughly <strong>$50 million to the LNG market</strong> — a small, speculative bet that the next era of energy transport (LNG carriage in particular) gets structurally tighter. It is not material to today's numbers and is excluded from the valuation; treat it as a free option on energy-shipping scarcity, with the downside capped at the capital committed. <span class="c cm">optionality</span></div>
+
+<div class="dv"></div>
+
+<h1 id="s2">2 · The Investment Thesis (Three Lenses)</h1>
+<p>I look at this company through three questions, and they turn out to be the entire thesis.</p>
+<div class="in"><div class="it">Lens 1 — What are the ships earning, and how long is it locked?</div>Danaos has 100% of 2026 contracted, 88% of 2027, and 65% of 2028. Utilization runs 96–100%; the only idle days last quarter came from two bulkers in scheduled drydock. The income for the next two years is not a forecast — it is a signed lease. That is why this is a landlord, not a trader.</div>
+<div class="in"><div class="it">Lens 2 — What are the ships actually worth?</div>On the balance sheet, the fleet is carried at a book value of about $3.3B. Track the actual second-hand market, where comparable ships change hands today, and the same fleet is worth closer to $3.6B. Since ship prices may be near a cyclical high, we deliberately use the more conservative $3.3B book figure in our valuation. Even on that conservative basis, the company is worth well above its $2.27B market cap.</div>
+<div class="in"><div class="it">Lens 3 — Can the tenants pay?</div>The rent roll is concentrated — CMA CGM (~21%), MSC (~13–16%), COSCO, Maersk, Hapag-Lloyd. The big charterers are financially strong, but liner profits are falling sharply across the industry in 2026, and a cash-strapped tenant renegotiates. This is the real risk, and it is the one to watch.</div>
+<p>If all three line up, you own a cheap, well-financed landlord with paying tenants. If lenses 1 and 2 sit at high tide while lens 3 deteriorates, you own a value trap. The truth is in the middle, and the backlog is what tips it toward owning it.</p>
+
+<div class="dv"></div>
+
+<h1 id="s3">3 · What the Market Sees vs. What It May Be Missing</h1>
+<p><strong>What the market sees:</strong> a Greek shipping company. Cyclical. Charter rates everyone knows are about to fall as ~450,000 TEU of new capacity arrives in H1 2026. A family-controlled balance sheet. A chart that has tripled off the October 2025 low of $83. So the market puts a 4x multiple on peak earnings — precisely because it expects those earnings to fall. The low multiple isn't a mistake; it reflects doubt that the current level of earnings will hold.</p>
+<h3>What it may be missing</h3>
+<p><strong>First, the backlog changes the math on "the E will fall."</strong> Spot rates are rolling over, but Danaos earns a signed lease book covering all of 2026 and most of 2027. Earnings cannot fall to spot until the leases roll — and by then the company has collected two years of heavy cash flow and bought back stock. The market is pricing a 2026 rate cut into a company that won't feel one in 2026.</p>
+<p><strong>Second, in a cyclical the balance sheet is the whole game, and this one is bulletproof.</strong> With ~$170M net debt (0.23x EBITDA), Danaos is the buyer, not the seller, when rates crater and over-levered owners dump ships. That asymmetry is worth a great deal, and the multiple gives you none of it.</p>
+<p><strong>Third, the stock trades below a conservative book value.</strong> A shipping company usually trades at 0.63x book near the <em>bottom</em> of a cycle. Trading there near the <em>top</em>, with second-hand values at decade highs, only makes sense if you believe the cycle peaks today. But management — covered in the next section — is <strong>expanding the fleet, not retreating</strong>. That is not how operators behave when they think the peak has arrived.</p>
+
+<div class="dv"></div>
+
+<h1 id="s4">4 · Management &amp; Track Record</h1>
+<p>The case for trusting the "they're expanding because they don't think it's the peak" signal rests on who is sending it.</p>
+<div class="ex i">
+  <div class="el">A seasoned operator that has survived the worst</div>
+  The Coustas family has run Danaos for roughly <strong>50 years</strong> — among the most experienced operators in container leasing. They have steered the company through the <strong>2008 financial crisis</strong> and the <strong>2020 pandemic</strong>, two of the harshest shocks the industry has faced, and come out the other side intact. That history is exactly why they are unusually disciplined about leverage today.
+</div>
+
+<h3>The ZIM stake — a well-timed windfall</h3>
+<p>The most remarkable chapter is the ZIM stake. In ZIM's <strong>2014 restructuring</strong>, the distressed carrier negotiated <strong>reduced charter rates</strong> on six Danaos vessels and cancelled other obligations; in exchange, Danaos accepted <strong>ZIM notes and shares — a stake of roughly 7.6% of ZIM</strong> (later built up to ~10.2%, about 10.2 million shares). For years it looked like a write-off — Danaos even booked a ~$19M hit on the restructuring. Then ZIM <strong>IPO'd in January 2021</strong>; the stock soared through the container boom, the stake was worth roughly <strong>$400 million</strong>, and Danaos sold it down — collecting ZIM's large special dividends along the way — <strong>exiting fully by Q3 2022</strong>.</p>
+
+<div class="in"><div class="it">One contributor to the deleveraging, not the whole story</div>Net debt fell from roughly <strong>$2.43 billion in 2016</strong> to ~$1.25B by 2021 and toward minimal levels today. The bulk of that came from <strong>strong operating cash flow through the 2021–2024 boom</strong>; the ~$400M of ZIM proceeds (plus ZIM's dividends) was a meaningful contributor on top. The takeaway is qualitative: a seasoned team turned distressed charter concessions into real cash and, with the cycle's help, used it to repair the balance sheet. <span class="c ch">verified · Danaos 20-F, TradeWinds, The Loadstar</span></div>
+
+<p>The relevance to the thesis is direct. When a management team that has navigated 2008, 2020, and a near-death debt load chooses to <strong>expand</strong> rather than retreat at what looks like a cycle top, that is a meaningful signal — these are not people who take balance-sheet risk lightly.</p>
+
+<div class="dv"></div>
+
+<h1 id="s5">5 · Latest Earnings Review — Q1 2026</h1>
+<p>It was a quiet, solid quarter.</p>
+<div class="tw"><table class="t">
+  <tr><th>Metric</th><th>Q1 2026</th><th>Q1 2025</th><th>YoY</th></tr>
+  <tr><td>Operating Revenue</td><td>$253.7M</td><td>~$255M</td><td>~flat</td></tr>
+  <tr><td>Adj. EBITDA</td><td>$180.6M</td><td>$171.7M</td><td class="lo">+5%</td></tr>
+  <tr><td>Net Income (GAAP)</td><td>$140.4M</td><td>$115.1M</td><td class="lo">+22%</td></tr>
+  <tr><td>Diluted EPS</td><td>$7.70</td><td>$6.13</td><td class="lo">+26%</td></tr>
+  <tr><td>Drybulk TCE ($/day)</td><td>$24,800</td><td>$10,500</td><td class="lo">+136%</td></tr>
+  <tr><td>Contracted Backlog</td><td>$4.1B</td><td>$4.3B</td><td>—</td></tr>
+</table></div>
+<p>Two things matter; the rest is noise. <strong>Drybulk is on a clear upward trend</strong> — time-charter-equivalent earnings more than doubled to $24,800/day, swinging the segment from loss to profit. <strong>Containership was relatively flat</strong>, with results impacted by inflation (rising operating costs) rather than any clear rate decline. It's too early to read a trend there — the next one or two quarters will tell whether anything is genuinely changing.</p>
+<p>The rest is housekeeping I like to see: the company repaid $262.8M of 8.5% senior notes, prepaid $213.8M of bank debt, kept buying back stock, and paid its $0.90 quarterly dividend — returning a lot of cash while conditions are good.</p>
+
+<div class="dv"></div>
+
+<h1 id="s6">6 · What the Fleet Is Worth — the NAV Method</h1>
+<p>Start with a principle: you cannot value a ship company off book value alone. The balance sheet carries each vessel at cost less depreciation — what the ship <em>cost</em>, not what it is <em>worth</em> today. You have to track the actual second-hand market price and mark the fleet to that. With second-hand values at multi-year highs, book almost certainly understates the truth.</p>
+<h3>Calibrated to actual recent sales</h3>
+<div class="tw"><table class="t">
+  <tr><th>Real transaction (2025–26)</th><th>Actual</th><th>Model mark</th></tr>
+  <tr><td>15-yr 2,500 TEU feeder (Jan-26)</td><td>$31.2M</td><td>$29M</td></tr>
+  <tr><td>18-yr 4,730 TEU panamax (MSC)</td><td>$35M</td><td>$28M</td></tr>
+  <tr><td>15-yr ~8,500 TEU (ONE en-bloc)</td><td>~$77M</td><td>$61M</td></tr>
+  <tr><td>5-yr mid-size basket</td><td>$11,400/TEU</td><td>anchored</td></tr>
+</table></div>
+<p>Older tonnage is holding value remarkably well, so a generic depreciation curve badly understates it. I anchor to those prints — feeders at a steep per-TEU premium, large ships at a discount, a gentle decline with age — and price all 86 hulls individually.</p>
+<div class="ct"><div class="ctt">One deliberate adjustment</div>The eight largest ships — five 13,082 TEU sisters and three 10,114 TEU vessels, all 2011–2012 — have the <strong>thinnest second-hand comps</strong> in the fleet, so I mark them at a deliberate <strong>30% discount</strong> to the curve. That is the most uncertain part of the estimate, and it is the conservative choice. They are ~15% of the fleet, so even a large haircut moves NAV only ~$8–11.</div>
+<p>Two numbers come out of this. On the company's balance sheet, the fleet is carried at a book value of about <strong>$3.3 billion</strong>; marked to the actual second-hand sales above, the same fleet is worth roughly <strong>$3.6 billion</strong>. Because ship prices may be near a cyclical high, we deliberately anchor on the conservative <strong>$3.3 billion book figure</strong>. Add $876M of cash and $144M of Star Bulk securities, subtract $1,046M of debt, and NAV is about <strong>$176 per share (0.69x)</strong>. On the richer $3.6 billion second-hand value, NAV would be about <strong>$192</strong>. Either way, the stock at $122 trades at a clear discount to the ships.</p>
+<div class="in"><div class="it">Newbuilds are excluded from NAV — on purpose</div>Vessels under construction are not yet balance-sheet assets; only progress payments are capitalized as a hull is built. So the newbuild orderbook is excluded from NAV entirely — its value arrives later, as each ship delivers and begins earning, and it belongs in the cash-flow view, not the asset view.</div>
+<div class="ex w"><div class="el">Caveat</div>The $3.6 billion second-hand value sits at the top of an unusually strong sale-and-purchase market, and a mark is not a sale: in a downturn, volume thins out and you cannot sell dozens of ships at quoted prices. That is exactly why we carry the lower $3.3 billion book figure as the base and treat the ~$192 market NAV as upside, not the anchor. The asset value is real, but fully bankable only for an owner that is never forced to sell. With its low leverage, Danaos is that kind of owner.</div>
+
+<div class="dv"></div>
+
+<h1 id="s7">7 · The Breakeven Question</h1>
+<p>Computing the breakeven separates "earnings fall" from "company loses money" — very different risks. <span class="c cm">estimate</span></p>
+<div class="tw"><table class="t">
+  <tr><th>Per mid-size containership</th><th>$/day</th><th>Basis</th></tr>
+  <tr><td>Vessel operating cost</td><td>~$6,500</td><td>Industry norm</td></tr>
+  <tr><td>Overhead + drydock reserve</td><td>~$2,000</td><td>Estimate</td></tr>
+  <tr><td>Cash interest</td><td>~$2,000</td><td>$1.05B gross debt</td></tr>
+  <tr><td>Cash breakeven</td><td class="lo">~$10–12k</td><td>vs charter $40–65k</td></tr>
+</table></div>
+<p>Charter rates would have to fall <strong>70–80%</strong> before the operating fleet stops generating cash. Earnings can halve and Danaos still produces heavy free cash flow. So the bear case is almost never insolvency — it's that peak earnings normalize, the multiple was on peak earnings, and the stock drifts as the E re-rates down. A real way to lose money, but far gentler than a wipeout, and the dividend and buyback pay you to wait.</p>
+
+<div class="dv"></div>
+
+<h1 id="s8">8 · Can the Tenants Pay the Rent?</h1>
+<div class="tw"><table class="t">
+  <tr><th>Tenant (~exposure)</th><th>2025/26 health</th><th>Default risk</th></tr>
+  <tr><td>CMA CGM (~21%)</td><td style="text-align:left;font-family:var(--f)">Rev $54.4B, EBITDA $10.6B, net debt $3.7B</td><td class="lo">Low</td></tr>
+  <tr><td>MSC (~13–16%)</td><td style="text-align:left;font-family:var(--f)">Private, world's largest carrier</td><td class="lo">Low</td></tr>
+  <tr><td>COSCO</td><td style="text-align:left;font-family:var(--f)">Q3 net −55% but profitable, state-backed</td><td class="lo">Low</td></tr>
+  <tr><td>Hapag-Lloyd</td><td style="text-align:left;font-family:var(--f)">Q1 2026 profit −155% (loss)</td><td class="am">Medium</td></tr>
+  <tr><td>Maersk / others</td><td style="text-align:left;font-family:var(--f)">Solid</td><td class="lo">Low</td></tr>
+</table></div>
+<div class="ex w"><div class="el">The most important risk to weigh</div>The tenants are financially strong today, but their profits are falling sharply in 2026. Long leases are valuable until the tenants get weak enough to ask for lower rates or threaten to walk. Two structural risks compound this: outright counterparty failure (low near-term), and the growing desire among carriers to <strong>own their own ships</strong> rather than charter them (slow, structural). The latter is the real reason the <strong>2027–2028 re-charter window</strong> matters more than anything on the 2026 income statement. Watch the liner income statements — they are the leading indicator.</div>
+
+<div class="dv"></div>
+
+<h1 id="s9">9 · Peer Comparison</h1>
+<p>Two listed peers do roughly the same thing — own ships and lease them to liners: <strong>Costamare (CMRE)</strong> and <strong>Global Ship Lease (GSL)</strong>. The comparison is what makes Danaos's balance sheet stand out. <span class="c cm">figures directional</span></p>
+<div class="tw"><table class="t">
+  <tr><th>Metric</th><th>DAC</th><th>CMRE</th><th>GSL</th></tr>
+  <tr><td>Market cap</td><td>~$2.3B</td><td>~$1.7B</td><td>~$1.1B</td></tr>
+  <tr><td>Trailing P/E</td><td class="lo">~4.0x</td><td class="am">higher (~6–8x)</td><td>~3–4x</td></tr>
+  <tr><td>Net debt / EBITDA</td><td class="lo">&lt;1x</td><td class="am">~1.5x</td><td class="hi">~2.9x</td></tr>
+  <tr><td>Interest coverage</td><td class="lo">~15x</td><td>—</td><td class="am">~4.5x</td></tr>
+  <tr><td>Operating margin</td><td class="lo">~57–60%</td><td>~57–60%</td><td>~52%</td></tr>
+  <tr><td>Fleet</td><td>86, modern core</td><td>diversified + leasing arm</td><td class="am">older (~14yr), smaller</td></tr>
+</table></div>
+<div class="in"><div class="it">Same business, very different balance sheets</div><strong>CMRE</strong> trades at a richer multiple than Danaos, but it carries clearly more leverage for its size and has spread into a dry-bulk and leasing platform — a more complex, more indebted story. <strong>GSL</strong> is the cheapest on earnings, but it is materially smaller, its fleet is older (~14-year average, a real liability as decarbonization rules tighten), and it is the most leveraged of the three with the weakest interest coverage. Danaos sits in the middle on price but at the <strong>top on balance-sheet quality</strong> — you are paying a low multiple for the lowest-risk balance sheet in the group, which is exactly what you want to own near a cycle peak.</div>
+
+<div class="dv"></div>
+
+<h1 id="s10">10 · Valuation — Collect the Backlog, Then Sell the Fleet</h1>
+<p>I value Danaos three ways and anchor on the third, because it matches how a leasing company actually creates value.</p>
+<div class="vd">
+  <div class="vdt">Three lenses on the same equity</div>
+  <div class="lad" id="ladder"></div>
+  <p style="font-size:12.5px;color:var(--t2);margin:12px 0 0">▏ vertical line = current price $122. We anchor on the conservative book NAV (~$176); marked to the second-hand market it would be ~$192. Earnings power and the Combined view sit nearby at ~$160 and ~$173.</p>
+</div>
+<p><strong>Lens 1 — NAV (asset floor, our anchor):</strong> the fleet is carried at ~$3.3B on the books and worth ~$3.6B at second-hand prices; we conservatively use the $3.3B book figure. Add cash and securities, settle the debt → NAV ~$176 (0.69x), or ~$192 if marked to the market.</p>
+<p><strong>Lens 2 — Earnings power (going concern):</strong> the present value of the net income the fleet generates, margins stepping down to mid-cycle → ~$160.</p>
+<p><strong>Lens 3 — Combined (cross-check):</strong> collect ~3 years of contracted backlog income (~$1.2B PV), then sell the fleet at a conservative 80%-of-book terminal (~$2.0B PV), add cash and securities, settle $1.05B of debt → about <strong>$173, ~42% above today's price</strong>. This legitimately adds income + ship sale without double-counting: the earning window is finite and the sale is the terminal value. It lands right next to the book NAV, which is reassuring.</p>
+
+<div class="dv"></div>
+
+<h1 id="s11">11 · Scenario Analysis</h1>
+<div class="scen">
+  <div class="scc bull"><div class="scl">Bull · 2–3 yr</div><div class="scv mg2">$190–210</div><div class="scs">Cycle firm, fleet holds its ~$3.6B second-hand value</div></div>
+  <div class="scc base"><div class="scl">Base · 2–3 yr</div><div class="scv">$170–180</div><div class="scs">Conservative book NAV, paid ~7% to wait</div></div>
+  <div class="scc bear"><div class="scl">Bear</div><div class="scv ma">$120–130</div><div class="scs">Ship values −25–35% + weak tenant; ~today's price</div></div>
+</div>
+<div class="in"><div class="it">The cushion the real-price marks reveal</div>Even a 25–35% correction in ship values only pulls NAV to ~$120–135, still around today's price. That is the cushion: the downside that matters here is the peak-cycle value trap (earnings and asset values normalizing together), not insolvency — the backlog and low leverage keep a genuine breakdown off the table.</div>
+
+<div class="dv"></div>
+
+<h1 id="s12">12 · Key Risks</h1>
+<div class="in"><div class="it">Peak-cycle value trap — the #1 risk</div>A low P/E and low P/B at the top of a cycle is the most reliable way thoughtful people lose money in shipping. Both the earnings anchor and the asset anchor are inflated by the same cycle. The discipline is to underwrite to mid-cycle — which the Combined valuation partly does (80% terminal, margins stepping down).</div>
+<div class="in"><div class="it">Red Sea normalization</div>Rerouting around Africa is absorbing enormous capacity. If the Suez routing reopens, effective supply jumps &gt;10% almost overnight and rates can fall fast. Binary, geopolitical, unforecastable — the single biggest swing factor on 2026–27 rates.</div>
+<div class="in"><div class="it">Capital allocation at the top</div>Management is expanding the fleet and entering Alaska LNG — building assets at peak prices — while going slow on buybacks. Ordering steel at the top is the classic shipping mistake; Alaska LNG specifically is a troubled mega-project outside the core competence. I want to see discipline, not empire-building.</div>
+<div class="in"><div class="it">Family control &amp; securities</div>The Coustas family controls Danaos, with related-party fleet management. The reported liquidity includes $144M of Star Bulk shares — volatile equity, not cash. And the balance sheet, while strong, is not net cash: ~$170M of net debt, not the net-cash position a quick glance suggests.</div>
+<div class="in"><div class="it">The 2028 cliff</div>Coverage drops to 65% in 2028 and thinner beyond, and the newbuilds deliver into that unknown. The visibility that makes 2026–27 comfortable runs out exactly when the orderbook lands.</div>
+
+<div class="dv"></div>
+
+<h1 id="s13">13 · Final Judgment</h1>
+<p class="lead">Danaos is not a cheap growth stock; it is a <strong>minimally-levered landlord trading below the value of its ships and its contracts</strong>, sitting near the top of a charter cycle. Three of the four real worries — insolvency, forced selling, tenant default — are well defended by the balance sheet and the backlog. The fourth, that you are buying peak earnings and peak asset values at the same time, is real, and it is exactly why the multiple is 4x rather than 8x. The market is not being foolish; it is pricing the cycle.</p>
+<p>My conviction is that the price protects you, the balance sheet means you cannot be forced out, and you are paid ~7% a year to wait for the gap between $122 and a conservative fair value of about $176 (≈$192 if the fleet is marked to the second-hand market) to close. That is a genuinely good risk-reward — provided you treat it as a cyclical: size it accordingly, watch charter rates and liner profitability, and be willing to sell when the cycle turns. The main mistake to avoid is confusing a good entry point with a permanent holding. Ships are not compounders.</p>
+<div class="vd">
+  <div class="vdt">Rating — LONG · Cyclical Value</div>
+  <p style="margin:0;font-size:14px">Fair value <strong>~$176</strong> (conservative book basis; ~$192 at second-hand market). Buy the discount, but treat it as a cyclical and be ready to sell when the cycle turns.</p>
+</div>
+<p style="font-size:11px;color:var(--t3);margin-top:24px;line-height:1.6">Disclaimer: Views of the author as of June 2026. Not investment advice. Based on public information including Danaos's Q1 2026 earnings (May 12, 2026) and 2025 Annual Report. NAV, breakeven and peer figures are estimates from industry norms and public sources, not company-disclosed. All investing involves risk of loss.</p>
+
+</main>
+</div>
+
+<script>
+const rows=[
+ {l:'Earnings power',v:160,c:'#9A6700'},
+ {l:'Combined',v:173,c:'#9A6700'},
+ {l:'NAV — book (anchor)',v:176,c:'#1A7F37'},
+ {l:'NAV — second-hand mkt',v:192,c:'#1A7F37'},
+];
+const MAX=230, PX=122;
+let h='';
+rows.forEach(r=>{const w=(r.v/MAX*100).toFixed(1);
+  h+=`<div class="lr"><div class="lrl">${r.l}</div><div class="lrt" style="color:${r.c}">$${r.v}</div><div class="lrbar"><div class="lrf" style="width:${w}%;background:${r.c}"></div><div class="pxm" style="left:${(PX/MAX*100).toFixed(1)}%"></div></div></div>`;});
+document.getElementById('ladder').innerHTML=h;
+const links=[...document.querySelectorAll('.si')], secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+function spy(){let i=secs.length;while(--i>0&&window.scrollY+120<secs[i].offsetTop);links.forEach(a=>a.classList.remove('a'));links[i]&&links[i].classList.add('a');}
+window.addEventListener('scroll',spy);spy();
+</script>
+</body>
+</html>
