@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danaos (DAC) 中文投资备忘录</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+:root{--bg:#F5F4EF;--bg-card:#FFF;--bg-s:#EDECE7;--bg-sb:#2F2F2C;--t1:#1A1915;--t2:#63635E;--t3:#8F8E88;--ti:#F5F4EF;--b1:#D8D6CE;--b2:#E8E6E0;--b3:#F0EEE8;--acc:#C96442;--red:#B8352A;--rsc:#FBEAE8;--grn:#1A7F37;--gs:#E6F6EC;--amb:#9A6700;--as:#FFF4D4;--blu:#1F6FEB;--bs:#E8F0FE;--r:12px;--rs:8px;--rx:6px;--f:'Inter','Noto Sans SC',-apple-system,sans-serif;--fm:'JetBrains Mono',monospace;--sh:0 1px 2px rgba(0,0,0,.04);--shm:0 2px 8px rgba(0,0,0,.06)}
+*{margin:0;padding:0;box-sizing:border-box}html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--t1);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.L{display:flex;min-height:100vh}
+.S{width:264px;min-width:264px;background:var(--bg-sb);color:var(--ti);position:sticky;top:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;border-right:1px solid rgba(255,255,255,.06)}
+.S::-webkit-scrollbar{width:4px}.S::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px}
+.sh{padding:22px 20px 16px}.st{font-family:var(--fm);font-size:10.5px;color:var(--acc);letter-spacing:.12em;margin-bottom:7px;font-weight:600}.sn{font-size:16px;font-weight:600;line-height:1.35;letter-spacing:0}.ss{font-size:12px;color:rgba(255,255,255,.46);margin-top:5px;line-height:1.55}
+.sbadge{display:inline-block;margin-top:11px;background:rgba(255,255,255,.1);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:5px;letter-spacing:.02em}
+.sN{flex:1;padding:8px}.sgl{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:14px 12px 6px;font-weight:500}
+.si{display:flex;align-items:center;gap:9px;padding:7px 12px;border-radius:var(--rx);font-size:13px;color:rgba(255,255,255,.58);cursor:pointer;transition:all .12s;text-decoration:none;margin-bottom:1px}
+.si:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.85)}.si.a{background:rgba(255,255,255,.1);color:#fff;font-weight:500}
+.sd{width:5px;height:5px;border-radius:50%;flex-shrink:0;background:var(--acc)}.sf{padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.06)}.sm{font-size:11px;color:rgba(255,255,255,.32);line-height:1.6}
+.M{flex:1;padding:42px 60px 110px;max-width:900px}
+h1{font-size:24px;font-weight:650;line-height:1.35;letter-spacing:0;margin:46px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--b1)}h1:first-child{margin-top:0}
+p{margin-bottom:14px;font-size:14px;line-height:1.86}strong{font-weight:650}.green{color:var(--grn)}.amb{color:var(--amb)}.red{color:var(--red)}
+.pm{font-size:12px;color:var(--t3);margin-bottom:24px;display:flex;gap:16px;flex-wrap:wrap}
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:14px 0 24px}.mc{background:var(--bg-card);border:1px solid var(--b2);border-radius:var(--rs);padding:14px 16px;box-shadow:var(--sh)}.ml{font-size:11px;font-weight:500;color:var(--t3);margin-bottom:4px}.mv{font-family:var(--fm);font-size:22px;font-weight:600;letter-spacing:0;margin-bottom:2px}.ms{font-size:11.5px;color:var(--t2);line-height:1.5}
+.ex{background:var(--bg-card);border:1px solid var(--b2);border-left:3px solid var(--grn);border-radius:var(--r);padding:18px 22px;margin:18px 0 26px;box-shadow:var(--sh);font-size:13.5px;line-height:1.85}.el{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:8px}
+.tw{overflow-x:auto;margin:14px 0 20px;border:1px solid var(--b2);border-radius:var(--rs);box-shadow:var(--sh)}table.t{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--bg-card)}table.t th{padding:9px 11px;text-align:left;font-weight:600;font-size:11.5px;color:var(--t3);background:var(--bg-s);border-bottom:1px solid var(--b1);white-space:nowrap}table.t td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--b3);font-size:12.2px;line-height:1.55}table.t tr:last-child td{border-bottom:none}table.t tr:hover td{background:rgba(0,0,0,.015)}
+.dv{height:1px;background:var(--b2);margin:44px 0}
+@media(max-width:1024px){.S{width:220px;min-width:220px}.M{padding:30px 36px 80px}}
+@media(max-width:768px){.L{flex-direction:column}.S{width:100%;min-width:auto;height:auto;position:relative}.sN{display:flex;overflow-x:auto;padding:8px;gap:4px}.sgl{display:none}.si{white-space:nowrap;font-size:12px;padding:6px 10px}.M{padding:22px 16px 60px;max-width:100%}}
+</style>
+</head>
+<body>
+<div class="L">
+<nav class="S">
+  <div class="sh">
+    <div class="st">DAC · NYSE</div>
+    <div class="sn">Danaos Corporation</div>
+    <div class="ss">一只按周期股来买的海上包租公</div>
+    <span class="sbadge">LONG · 保守锚 ~$176</span>
+  </div>
+  <div class="sN">
+    <div class="sgl">Memo</div>
+    <a class="si" href="#s0"><span class="sd"></span>摘要</a>
+<a class="si" href="#s1"><span class="sd"></span>1 · 生意模式</a>
+<a class="si" href="#s2"><span class="sd"></span>2 · 投资逻辑</a>
+<a class="si" href="#s3"><span class="sd"></span>3 · 市场分歧</a>
+<a class="si" href="#s4"><span class="sd"></span>4 · 管理层</a>
+<a class="si" href="#s5"><span class="sd"></span>5 · Q1 2026</a>
+<a class="si" href="#s6"><span class="sd"></span>6 · 船队 NAV</a>
+<a class="si" href="#s7"><span class="sd"></span>7 · Breakeven</a>
+<a class="si" href="#s8"><span class="sd"></span>8 · 租客风险</a>
+<a class="si" href="#s9"><span class="sd"></span>9 · 同行对比</a>
+<a class="si" href="#s10"><span class="sd"></span>10 · 估值</a>
+<a class="si" href="#s11"><span class="sd"></span>11 · 情景推演</a>
+<a class="si" href="#s12"><span class="sd"></span>12 · 风险</a>
+<a class="si" href="#s13"><span class="sd"></span>13 · 最终判断</a>
+  </div>
+  <div class="sf"><div class="sm">买方研究 · 2026 年 6 月<br>基于 Q1 2026 财报与 2025 年年报</div></div>
+</nav>
+<main class="M">
+<h1>Danaos (DAC) 中文投资备忘录</h1>
+<div class="pm"><span>Danaos Corporation (DAC) · NYSE</span><span>2026 年 6 月</span><span>中文版 smooth copy</span></div>
+<div class="mg">
+<div class="mc"><div class="ml">股价 (6/29/26)</div><div class="mv ">$122</div><div class="ms">52 周 $83至135</div></div>
+<div class="mc"><div class="ml">市值</div><div class="mv ">~$2.27B</div><div class="ms">约 18.6M 股</div></div>
+<div class="mc"><div class="ml">Trailing P/E</div><div class="mv green">~4.0x</div><div class="ms">P/B 0.63x</div></div>
+<div class="mc"><div class="ml">净负债</div><div class="mv ">~$170M</div><div class="ms">0.23x EBITDA</div></div>
+<div class="mc"><div class="ml">已签 Backlog</div><div class="mv ">$4.1B</div><div class="ms">26/27/28 覆盖 100/88/65%</div></div>
+<div class="mc"><div class="ml">股东回报率</div><div class="mv green">~7%</div><div class="ms">约 3% 股息 + 回购</div></div>
+<div class="mc"><div class="ml">保守估值锚</div><div class="mv green">~$176</div><div class="ms">二手口径 ~$192 · Combined ~$173</div></div>
+<div class="mc"><div class="ml">船队</div><div class="mv ">86 艘</div><div class="ms">75 集装箱船 + 11 Capesize</div></div>
+</div>
+<h1 id="s0">摘要</h1>
+<p>Danaos 是什么：它是全球最大几家航运公司的“包租公”。把船像房间一样租出去收钱，继续买房，继续收租。As simple as that。</p>
+<p>市场目前给它 4x P/E、0.63x P/B。在动辄 100x P/E 的 AI 时代，这确实是一个非常好的 deal。但下一步真正要确认的不是“便宜不便宜”，而是这三个便宜的来源到底靠不靠谱：第一，0.63x P/B 背后的 Book Value 是不是真实的；第二，~4x P/E 背后的 E 是不是真实、且可持续的；第三，作为周期股，现在是不是已经处在周期顶部。</p>
+<p>我的结论是：便宜是真的，资产负债表也是真的干净，但这不是可以闭眼拿十年的复利机器。它是一个低杠杆、长约锁定现金流、按低于船队价值交易的周期股。买点好，安全垫够，但必须尊重周期。</p>
+<div class="ex g"><div class="el">核心判断</div>按租赁生意的逻辑来估值，先收未来几年的确定租金，再看船队剩余价值，Danaos 的保守估值锚约 $176，二手市场口径约 $192，Combined 方法约 $173，相比 $122 约有 44% 上行。真正的风险不是破产，而是买在盈利和船价同时偏高的位置。</div>
+<div class="dv"></div>
+<h1 id="s1">1 · 生意模式：海上的包租公</h1>
+<p>Danaos 的生意很简单：买船，租给大型班轮公司，收多年期租金。公司拥有 75 艘集装箱船和 11 艘 Capesize 干散货船，收入大头来自集装箱船，FY2025 约 90% 以上收入来自这个分部。</p>
+<p>集装箱船本质上吃的是亚洲出口到欧美的制造品需求；Capesize 散货船反过来，主要运铁矿和煤，把资源从美洲、澳洲拉回亚洲。两者都服务实物贸易，只是站在贸易链条的不同端。</p>
+<p>公司最近还投入约 $50M 到 LNG 运输相关项目，这个数目前不影响估值主线。更合适的理解是：一张能源运输紧张的 call option，有上行可能，但不应该为今天的投资逻辑买单。</p>
+<div class="tw"><table class="t">
+<tr><th>分部</th><th>规模 / 货物</th><th>核心逻辑</th></tr>
+<tr><td>集装箱船</td><td>75 艘，约 477k TEU</td><td>多年期租约，主要服务中国、东南亚到美国和欧洲的货物流</td></tr>
+<tr><td>Capesize 干散货</td><td>11 艘</td><td>主要运铁矿、煤等大宗商品，补充亚洲原材料需求敞口</td></tr>
+<tr><td>LNG option</td><td>~$50M 投入</td><td>可选项，不是今天估值的核心驱动</td></tr>
+</table></div>
+<div class="dv"></div>
+<h1 id="s2">2 · 投资逻辑：三个问题，先给结论</h1>
+<p>这家公司不用把故事讲复杂。真正要判断的就是三个问题：Book Value 是不是真的，Earnings 是不是真的，周期是不是已经到顶。</p>
+<p>第一，Book Value。按公司资产负债表口径，船队账面价值约 $3.3B；按照最近三年二手集装箱船成交价反推，二手市场口径接近 $3.6B。换句话说，book value 不是空转出来的会计数字，保守用 $3.3B 算也站得住。B 是真实的 B。</p>
+<p>第二，PE Ratio。目前已签 backlog $4.1B，如果按约 50% 利润率估算，当前 ~4x P/E 确实有合约基础。四年后合约会陆续重签，但船还在，世界也仍然需要船来运货、运铁矿、运煤。E 不是一次性收益，是真实的 E。</p>
+<p>第三，是不是周期顶部。周期确实在高位，未来全球经济也可能继续变差，运价和船价都有回撤风险。但世界各国仍在发展，实物贸易不会消失；空运远远无法承接海运的吞吐量，尤其是集装箱、铁矿、煤这些低单位价值、高重量的货。真正要判断的是买入价格和安全垫，而不是海运需求会不会消失。</p>
+<div class="ex g"><div class="el">一句话</div>这不是“航运永远好”的投资，而是“市场把一个有真实资产、真实合同、低杠杆的周期股，按一个很低价格卖给你”的投资。</div>
+<div class="dv"></div>
+<h1 id="s3">3 · 市场看到了什么，可能漏掉了什么</h1>
+<p>市场看到的是一家希腊航运公司：周期股、家族控制、运价可能下行、股价已经从 2025 年低点大幅反弹。市场给 4x multiple，并不是因为它不会算账，而是因为它不相信当前盈利能维持。</p>
+<p>市场可能漏掉的第一点，是 backlog 改写了“E 会掉”的时间表。现货运价可以往下走，但 Danaos 赚的是已经签好的租约。2026 已经 100% 覆盖，2027 也有 88% 覆盖。盈利不会立刻掉到现货价。</p>
+<p>第二点，是在周期股里，资产负债表就是生命线。Danaos 净负债约 $170M，仅 0.23x EBITDA。周期真下行时，高杠杆船东会被迫卖船，Danaos 更可能是买家，而不是卖家。</p>
+<p>第三点，是 0.63x book 的位置很反常。航运公司在周期底部打 0.63x book 不稀奇；但在二手船价很强、公司几乎没有净负债时还给这个折价，说明市场把“周期见顶”这个判断打得非常重。</p>
+<div class="dv"></div>
+<h1 id="s4">4 · 管理层与历史记录</h1>
+<p>Coustas 家族做船运大约 50 年，经历过 2008 金融危机和 2020 疫情冲击。这个背景很重要，因为航运业里最怕的不是短期亏损，而是在错误的时间背上错误的杠杆。</p>
+<p>ZIM 这笔投资很能说明管理层的周期感。2014 年 ZIM 重组时，Danaos 接受了 ZIM notes 和股权，后来在 2021 至 2022 年集装箱周期爆发时变现，带来约 $400M 级别现金收益，并帮助公司修复资产负债表。</p>
+<p>这不是说管理层永远不会犯错。现在最大争议恰恰是：一边说股票被低估，一边继续扩张船队、参与 Alaska LNG。如果股票真的这么便宜，回购自己可能比订新船更有吸引力。资本配置纪律需要继续盯。</p>
+<div class="dv"></div>
+<h1 id="s5">5 · 最新财报：Q1 2026</h1>
+<p>这个季度没有戏剧性，但质量不错。收入基本持平，调整后 EBITDA 增长 5%，GAAP 净利润同比增长 22%，摊薄 EPS 到 $7.70。</p>
+<p>最值得看的两个点：Drybulk 明显改善，TCE 从 $10,500/day 升到 $24,800/day；集装箱船相对平稳，但成本和重签价格变化已经开始体现周期正常化压力。</p>
+<p>资产负债表动作也很舒服：公司偿还 $262.8M 的 8.5% senior notes，提前还了 $213.8M 银行债，继续回购和派息。这就是周期高位应该做的事：先把钱收回来，先把资产负债表做硬。</p>
+<div class="tw"><table class="t">
+<tr><th>指标</th><th>Q1 2026</th><th>Q1 2025</th><th>同比</th></tr>
+<tr><td>Operating Revenue</td><td>$253.7M</td><td>~$255M</td><td>基本持平</td></tr>
+<tr><td>Adj. EBITDA</td><td>$180.6M</td><td>$171.7M</td><td>+5%</td></tr>
+<tr><td>Net Income (GAAP)</td><td>$140.4M</td><td>$115.1M</td><td>+22%</td></tr>
+<tr><td>Diluted EPS</td><td>$7.70</td><td>$6.13</td><td>+26%</td></tr>
+<tr><td>Drybulk TCE</td><td>$24,800/day</td><td>$10,500/day</td><td>+136%</td></tr>
+<tr><td>Contracted Backlog</td><td>$4.1B</td><td>$4.3B</td><td>略降</td></tr>
+</table></div>
+<div class="dv"></div>
+<h1 id="s6">6 · 船队价值：Book Value 到底实不实</h1>
+<p>看船公司不能只看会计 book。船在报表上按成本减折旧入账，但真正影响价值的是二手船市场成交价。当前二手船价处在多年高位，所以 book 很可能不是被高估，反而偏保守。</p>
+<p>按照最近交易校准，15 年左右的 feeder、panamax 和 8,500 TEU 级别船仍然能卖出相当强的价格。对 DAC 船队逐艘 mark 后，二手市场口径接近 $3.6B；公司资产负债表里的船队账面价值约 $3.3B。加现金和 Star Bulk 股权、扣债后，用账面口径的保守 NAV 约 $176/股；如果用二手市场口径，约 $192/股。</p>
+<p>这就是 0.63x P/B 的核心：它不是靠会计口径讲故事，而是二手市场成交价能支撑的折价。唯一必须承认的是，这个 NAV 是高潮位 NAV。如果运价下跌，船价也会下跌；但低杠杆让 Danaos 不需要在底部卖船。</p>
+<div class="ex g"><div class="el">NAV 的正确读法</div>NAV 是真实的，但不是无条件可兑现的。只有不被迫卖船的船东，才能把高周期 NAV 变成真正的安全垫。Danaos 的低杠杆正好解决了这个问题。</div>
+<div class="dv"></div>
+<h1 id="s7">7 · Breakeven：盈利下滑不等于亏钱</h1>
+<p>这道题要算清楚，因为“盈利下滑”和“公司亏钱”完全不是一回事。按行业经验值估算，一条中型集装箱船的现金 breakeven 大概在 $10k至12k/day。</p>
+<p>而当前 8,000 TEU 级别船的租金大约在 $40k至65k/day。也就是说，租金要跌 70% 至 80%，经营船队才会停止产生现金。</p>
+<p>所以 bear case 不是 Danaos 破产，而是峰值盈利回归正常，市场发现 4x P/E 是建立在高位 E 上，于是股价阴跌。这是真风险，但不是毁灭性风险。</p>
+<div class="tw"><table class="t">
+<tr><th>每条中型集装箱船</th><th>$/day</th><th>说明</th></tr>
+<tr><td>Vessel operating cost</td><td>~$6,500</td><td>行业经验值</td></tr>
+<tr><td>Overhead + drydock reserve</td><td>~$2,000</td><td>估算</td></tr>
+<tr><td>Cash interest</td><td>~$2,000</td><td>按 gross debt 分摊</td></tr>
+<tr><td>Cash breakeven</td><td>~$10k至12k</td><td>明显低于当前租金</td></tr>
+</table></div>
+<div class="dv"></div>
+<h1 id="s8">8 · 租客能不能付租</h1>
+<p>Backlog 只有在对手方履约时才值钱。Danaos 的租客集中在 CMA CGM、MSC、COSCO、Maersk、Hapag-Lloyd 等大型班轮公司，整体信用质量不差。</p>
+<p>真正要盯的是 2026 年班轮公司利润下滑。如果租客现金流快速恶化，它们会尝试重谈租约。合同不是握手承诺，但合同价值也不是铁板一块。</p>
+<p>短期看，违约风险不高；中期看，2027 至 2028 的重签窗口很关键。那时候 backlog 能见度下降，新船交付也开始进入市场，租金水平才是真正的考验。</p>
+<div class="tw"><table class="t">
+<tr><th>租客</th><th>财务状态</th><th>风险判断</th></tr>
+<tr><td>CMA CGM (~21%)</td><td>收入 $54.4B，EBITDA $10.6B，净负债 $3.7B</td><td>低，但 2026 指引谨慎</td></tr>
+<tr><td>MSC (~13至16%)</td><td>私有公司，全球最大承运商</td><td>低</td></tr>
+<tr><td>COSCO</td><td>利润下滑但仍盈利，国资背景</td><td>低</td></tr>
+<tr><td>Hapag-Lloyd</td><td>Q1 2026 转亏</td><td>中等，需要盯</td></tr>
+<tr><td>Maersk / 其他</td><td>整体稳健</td><td>低</td></tr>
+</table></div>
+<div class="dv"></div>
+<h1 id="s9">9 · 同行对比：便宜之外，账更干净</h1>
+<p>可比公司主要看 Costamare (CMRE) 和 Global Ship Lease (GSL)。这几家公司本质上都在做“拥有船，再租给 liner”的生意，但资产负债表质量差别很大。</p>
+<p>DAC 的估值不一定是最便宜，但它的杠杆最低、利息覆盖更舒服、船队质量更均衡。对一个周期高位的行业来说，我宁愿买稍微贵一点但不会被周期逼死的资产负债表。</p>
+<div class="tw"><table class="t">
+<tr><th>指标</th><th>DAC</th><th>CMRE</th><th>GSL</th></tr>
+<tr><td>市值</td><td>~$2.3B</td><td>~$1.7B</td><td>~$1.1B</td></tr>
+<tr><td>Trailing P/E</td><td>~4.0x</td><td>~6至8x</td><td>~3至4x</td></tr>
+<tr><td>Net debt / EBITDA</td><td>&lt;1x</td><td>~1.5x</td><td>~2.9x</td></tr>
+<tr><td>Interest coverage</td><td>~15x</td><td>较弱</td><td>~4.5x</td></tr>
+<tr><td>Operating margin</td><td>~57至60%</td><td>~57至60%</td><td>~52%</td></tr>
+<tr><td>船队</td><td>86 艘，核心较现代</td><td>业务更复杂</td><td>更老、更小</td></tr>
+</table></div>
+<div class="dv"></div>
+<h1 id="s10">10 · 估值：先收租，再卖船</h1>
+<p>我用三种方法看 DAC，最后锚定 Combined 方法，因为它最符合租赁公司的价值创造方式。</p>
+<p>第一，NAV。用公司账面船队价值约 $3.3B 做保守锚，加入现金和证券、扣掉债务，约 $176/股；按二手市场约 $3.6B mark，则约 $192/股。它回答的是：如果把已交付的船卖掉、把债还清，股东大概拿到什么。</p>
+<p>第二，Earnings power。把船队未来能产生的利润折现，并让利润率逐步回到 mid-cycle，大概 $160/股。</p>
+<p>第三，Combined。先收未来约 3 年已签 backlog 带来的净利润，再以保守终值卖掉船队。这个方法约 $173/股，比现价高约 42%。这不是重复计算，因为收入窗口是有限的，卖船是终值。</p>
+<div class="ex g"><div class="el">估值区间</div>不同方法大致落在 $160至192。主锚是保守 NAV 约 $176，这个区间不需要很精确，重点是每一种正常估法都高于 $122。</div>
+<div class="dv"></div>
+<h1 id="s11">11 · 情景推演</h1>
+<p>Bull case：红海绕行持续、运力被吸收，2027 重签价格接近当前水平，折价修复。目标 $205至225，外加约 7% 年化股东回报。</p>
+<p>Base case：运价回归正常，但 backlog 缓冲 2026 至 2027，船队价值不崩，市场把折价收窄到合理区间。目标 $165至185。</p>
+<p>Bear case：红海正常化，运力释放，二手船价跌 25% 至 35%，弱租客重谈。NAV 压到 $130至140，接近当前股价。下行有，但不像高杠杆航运股那样会被打穿。</p>
+<div class="ex g"><div class="el">关键不对称</div>上行来自折价修复和 backlog 兑现；下行主要来自周期见顶，但低杠杆和船队实物价值给了底部缓冲。</div>
+<div class="dv"></div>
+<h1 id="s12">12 · 关键风险</h1>
+<p>第一，周期顶部的 value trap。低 P/E 和低 P/B 在周期顶部最容易骗到聪明人。盈利和资产价值可能被同一个周期同时吹高。</p>
+<p>第二，红海航线正常化。如果苏伊士恢复，绕行吸收的有效运力会快速释放，运价可能突然下跌。</p>
+<p>第三，资本配置。管理层一边说股票低估，一边扩张船队、切入 Alaska LNG。如果在高位买资产、低位才回购，价值创造会被稀释。</p>
+<p>第四，家族控制与证券资产。Coustas 家族控制公司，少数股东治理风险长期存在；$144M Star Bulk 股票是有波动的证券，不是现金。</p>
+<p>第五，2028 cliff。2028 覆盖率降到 65%，再往后更薄，而新船交付刚好进入这个窗口。真正考验在那时。</p>
+<div class="dv"></div>
+<h1 id="s13">13 · 最终判断</h1>
+<p>Danaos 不是便宜成长股，也不是能无脑永久持有的 compounder。它是一个低杠杆包租公，按低于船队和合同价值的价格交易，同时站在航运周期高位附近。</p>
+<p>四个核心担忧里，破产、被迫卖船、短期租客违约这三项被资产负债表和 backlog 防得比较好。剩下那个担忧，也就是你同时买了峰值盈利和峰值资产价值，是真的，而且正是市场只给 4x multiple 的原因。</p>
+<p>我的判断是：价格保护你，资产负债表保护你，股息和回购付钱让你等。但这必须按周期股处理：仓位要克制，盯 charter rate、liner 利润和二手船成交，周期掉头时要愿意走。买的是折价，不是爱情。</p>
+<div class="ex g"><div class="el">评级</div>LONG，周期价值。保守锚 ~$176，二手口径 ~$192，Combined ~$173。买折价，但敬畏潮水。</div>
+
+<p style="font-size:11px;color:var(--t3);margin-top:24px;line-height:1.6">免责声明：本文代表作者截至 2026 年 6 月的观点，不构成投资建议。基于公开信息、Danaos Q1 2026 财报与 2025 年年报；NAV、breakeven、同行对比等为估算，投资有本金损失风险。</p>
+</main>
+</div>
+<script>
+const links=[...document.querySelectorAll('.si')], secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+function spy(){let i=secs.length;while(--i>0&&window.scrollY+120<secs[i].offsetTop);links.forEach(a=>a.classList.remove('a'));links[i]&&links[i].classList.add('a');}
+window.addEventListener('scroll',spy);spy();
+</script>
+</body>
+</html>
